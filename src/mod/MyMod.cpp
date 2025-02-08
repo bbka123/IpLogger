@@ -2,6 +2,11 @@
 
 #include "ll/api/mod/RegisterHelper.h"
 
+#include <ll/api/command/Command.h>
+#include <ll/api/command/CommandHandle.h>
+#include <ll/api/command/CommandRegistrar.h>
+#include <ll/api/event/player/PlayerJoinEvent.h>
+
 namespace my_mod {
 
 MyMod& MyMod::getInstance() {
@@ -16,7 +21,7 @@ bool MyMod::load() {
 }
 
 bool MyMod::enable() {
-    getSelf().getLogger().debug("Enabling...");
+    getSelf().getLogger().info("ping插件已运行...");
     // Code for enabling the mod goes here.
     return true;
 }
